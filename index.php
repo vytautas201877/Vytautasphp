@@ -1,2 +1,4 @@
 <?php
-print 'Puikiai Veikia';
+print 'Veikia su Github';
+
+?>
