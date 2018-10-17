@@ -1,9 +1,11 @@
-<html>
-<body>
+<?php 
+$text = 'sveiki';
+$integer = 123;
+$float = 1.333;
+$boolean = true;
+$nothing = null;
+?>
 
-<h1>Welcome to my home page!</h1>
-<p>Some text.</p>
-<p>Some more text.</p>
-
-</body>
-</html>
+<?php
+print $text . $integer . $float . $boolean . $nothing;
+        ?>
