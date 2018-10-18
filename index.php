@@ -1,25 +1,31 @@
 
 <?php 
+$distance_km = rand (10, 1300);
 $fuel_price = 1.3;
-$fuel =7.5;
-$nuvaziuoti_km = rand (10, 10000);
-$litrai = $nuvaziuoti_km * $fuel /100;
-$reikia_pinigu =$nuvaziuoti_km * $fuel/100*$fuel_price;
-print $nuvaziuoti_km ."km--  " . $reikia_pinigu .  "  eur--  " . $litrai . " litrai";
-$src = 'https://g3.dcdn.lt/images/pix/880x550/Kr_IhOGsxeU/ramunas-karbauskis-79349521.jpg';
+$fuel_cons =7.5;
+$my_money = 100;
+$tank_size = 40;
+$tank_distance_km = $tank_size / $fuel_cons *100;
+$pilti_kartu = $distance_km /($tank_size / $fuel_cons *100) ;
+
+$money_distance_km = $my_money /$fuel_price /$fuel_cons *100;
+$src = 'https://i.ebayimg.com/images/g/osQAAOSwbwlXBS-T/s-l300.jpg';
+if ($distance_km<=$money_distance_km):
+    print "galima nuvaziuoti,sekmingos keliones"; 
+  else:
+    print "neuztenka pinigu kelionei";
+  $pilti_kartu = 0;
+  endif;
 ?>
 <html>
-    <title>
-        
+    <title>        
     </title>
     <body>
         <img src = "<?php print $src?>">
+        <p><?php print 'Keliones atstumas km ='. ceil ($distance_km)   ?></p> 
+        <p><?php print "Galima nuvaziuoti su pilnu baku km=" . ceil($tank_distance_km) ?></p>
+        <p><?php print "Pinigu uzteks nuvaziuoti km=" . ceil ($money_distance_km)  ?></p>
+         <p><?php print 'uzpilta kartu=' . ceil($pilti_kartu)    ?></p> 
         
-        <p>
-            
-        </p>
-          
-        
-    </body>
-    
+    </body>    
 </html>
