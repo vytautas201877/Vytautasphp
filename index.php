@@ -10,8 +10,9 @@ $pilti_kartu = $distance_km /($tank_size / $fuel_cons *100) ;
 
 $money_distance_km = $my_money /$fuel_price /$fuel_cons *100;
 $src = 'https://i.ebayimg.com/images/g/osQAAOSwbwlXBS-T/s-l300.jpg';
+$foto ='https://image.shutterstock.com/image-vector/symbol-icon-yellow-unhappy-face-260nw-410279539.jpg';
 if ($distance_km<=$money_distance_km):
-    print "galima nuvaziuoti,sekmingos keliones"; 
+    print "galima nuvaziuoti,sekmingos keliones" ; 
   else:
     print "neuztenka pinigu kelionei";
   $pilti_kartu = 0;
@@ -22,6 +23,7 @@ if ($distance_km<=$money_distance_km):
     </title>
     <body>
         <img src = "<?php print $src?>">
+        <img src = "<?php print $foto?>">
         <p><?php print 'Keliones atstumas km ='. ceil ($distance_km)   ?></p> 
         <p><?php print "Galima nuvaziuoti su pilnu baku km=" . ceil($tank_distance_km) ?></p>
         <p><?php print "Pinigu uzteks nuvaziuoti km=" . ceil ($money_distance_km)  ?></p>
