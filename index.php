@@ -29,23 +29,18 @@ $panos = [
     
 ];
 
-function girls($panos){
-    $geros = [];
-    foreach($panos as $pana){
-        if($pana['Grazi'] && $pana['protinga']){
-            $geros[] = $pana['vardas'];
-        }
-    }
-    return $geros;
+function random($panos)
+{
+    $random = rand(0, count($panos)-1);
+    return $panos[$random]['vardas'];
+    
 }
-//$geros = girls($panos);
-
 ?>
 
 <html>
     <body>
-        <?php foreach(girls($panos) as $var): ?>
-        <h2><?php print $var; ?> </h2>
-        <?php endforeach; ?>
+        
+        <h2><?php print random($panos) ?> </h2>
+        
     </body>
 </html>
